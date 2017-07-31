@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Change Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <!-- Write your markup here -->
-
+    <h1>Change Calculator</h1>
+    <div class="jumbotron" id="div_main">
+    <label>How much is due for the sale?  
+    <input type="text" id="amount-due" maxlength=9 size=9 onchange="check(this)" />
+    </label><label>How much has the customer given you?
+    <input type="text" id="amount-received" maxlength=9 size=9 onchange="check(this)" />
+    </label>
+    <button id="calculate-change" class="btn-primary" onClick="onClickEvent()">Calculate</button>
+    </div>
+    <div id="dollars" class="jumbotron"><h4>Dollars</h4><p id="dollars-output">0</p></div>
+    
+    <div id="cents" class="jumbotron"><h4>Quarters</h4><p id="quarters-output">0</p></div>
+    <div id="cents" class="jumbotron"><h4>Dimes</h4><p id="dimes-output">0</p></div>
+    <div id="cents" class="jumbotron"><h4>Nickels</h4><p id="nickels-output">0</p></div>
+    <div id="cents" class="jumbotron"><h4>Pennies</h4><p id="pennies-output">0</p></div>
+    
     <!-- Don't forget to add your <script> tag here -->
-
+     <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
